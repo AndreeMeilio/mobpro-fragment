@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TugasFragmentMobPro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_app">MyNotes</string>
+    <string name="tambah_notes">Tambah Notes</string>
+    <string name="input_judul_label">Judul</string>
+    <string name="input_fragment_label">Tambah Notes</string>
+    <string name="input_isi_label">Isi</string>
+    <string name="submit_button">Submit</string>
+</resources>
