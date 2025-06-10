@@ -2,9 +2,12 @@ package com.andreemeilio.tugasfragmentmobpro;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DetailFragment extends Fragment {
@@ -16,6 +19,8 @@ public class DetailFragment extends Fragment {
     private String judul;
     private String isi;
     private String tanggal;
+
+    Button backButton;
 
     public static DetailFragment newInstance(String judul, String isi, String tanggal) {
         DetailFragment fragment = new DetailFragment();
@@ -57,6 +62,16 @@ public class DetailFragment extends Fragment {
         detailJudul.setText(this.judul);
         detailIsi.setText(this.isi);
         detailTanggal.setText(this.tanggal);
+
+        backButton = ((MainActivity) getActivity()).mainButton;
+        backButton.setText(R.string.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.popBackStack();
+            }
+        });
 
         return view;
     }

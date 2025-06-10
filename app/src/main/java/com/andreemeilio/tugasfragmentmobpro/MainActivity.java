@@ -1,6 +1,7 @@
 package com.andreemeilio.tugasfragmentmobpro;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    public Button mainButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        mainButton = (Button) findViewById(R.id.mainButton);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

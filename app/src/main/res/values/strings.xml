@@ -7,5 +7,6 @@
     <string name="input_judul_label">Judul</string>
     <string name="input_fragment_label">Tambah Notes</string>
     <string name="input_isi_label">Isi</string>
-    <string name="submit_button">Submit</string>
+    <string name="submit_button">Simpan</string>
+    <string name="back_button">Kembali</string>
 </resources>

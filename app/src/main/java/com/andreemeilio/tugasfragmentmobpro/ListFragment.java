@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class ListFragment extends Fragment {
 
     Button tambahNotesButton;
+
     RecyclerView listNotesRv;
     ListNotesAdapter adapterListNotes;
 
@@ -55,6 +56,8 @@ public class ListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
+
+
         listNotesRv = (RecyclerView) view.findViewById(R.id.listItemRv);
         listNotesRv.setLayoutManager(new LinearLayoutManager(view.getContext()));
         adapterListNotes = new ListNotesAdapter(dataNotes);
@@ -72,7 +75,7 @@ public class ListFragment extends Fragment {
 
                         System.out.println(dataNotes.get(position).getTanggal());
 
-                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        FragmentManager fragmentManager = getParentFragmentManager();
                         fragmentManager.beginTransaction()
                                 .replace(R.id.fragment_container_view, detailFragment.getClass(), detailFragment.getArguments())
                                 .setReorderingAllowed(true)
@@ -84,11 +87,12 @@ public class ListFragment extends Fragment {
         });
         listNotesRv.setAdapter(adapterListNotes);
 
-        tambahNotesButton = view.findViewById(R.id.addListButton);
+        tambahNotesButton = ((MainActivity) getActivity()).mainButton;
+        tambahNotesButton.setText(R.string.tambah_notes);
         tambahNotesButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentManager fragmentManager = getParentFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.fragment_container_view, InputFragment.class, null)
                         .setReorderingAllowed(true)

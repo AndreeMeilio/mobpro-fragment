@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.DateFormat;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Locale;
 
 public class InputFragment extends Fragment {
     Button inputSubmitButton;
@@ -33,18 +35,20 @@ public class InputFragment extends Fragment {
         judulEditText = view.findViewById(R.id.judulEditText);
         isiEditText = view.findViewById(R.id.isiEditText);
 
-        inputSubmitButton = view.findViewById(R.id.submitNotesButton);
+        inputSubmitButton = ((MainActivity) getActivity()).mainButton;
+        inputSubmitButton.setText(R.string.submit_button);
         inputSubmitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String resultJudul = judulEditText.getText().toString();
                 String resultIsi = isiEditText.getText().toString();
-                String resultTanggal = "";
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    resultTanggal = Date.from(Instant.now()).toString();
-                }
 
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                Locale locale = new Locale("id", "ID");
+                DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, locale);
+
+                String resultTanggal = dateFormat.format(new Date());
+
+                FragmentManager fragmentManager = getParentFragmentManager();
                 Bundle result = new Bundle();
                 result.putString(INPUT_JUDUL, resultJudul);
                 result.putString(INPUT_ISI, resultIsi);
