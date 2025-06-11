@@ -11,20 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:id="@+id/detail_toolbar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?attr/actionBarSize"-->
-<!--            android:background="?attr/colorPrimary"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"/>-->
-
         <TextView
             android:id="@+id/detail_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belanjaan Bulanan"
+            tools:text="Belanjaan Bulanan"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginHorizontal="24dp"
@@ -38,7 +29,7 @@
             android:id="@+id/detail_created_at"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="27 Mei 2025 20:20"
+            tools:text="27 Mei 2025 20:20"
             android:textSize="16sp"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="8dp"
@@ -61,11 +52,7 @@
                 android:id="@+id/detail_isi"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in sapien finibus, consectetur nisi sed, fermentum sem. Morbi commodo, velit eget laoreet iaculis, augue orci ullamcorper libero, ut aliquam odio sem ac purus. Ut ullamcorper sit amet nunc at condimentum. Fusce dui metus, consequat a leo ac, malesuada iaculis magna. Maecenas risus sapien, bibendum vel felis in, rhoncus suscipit mi. Vestibulum eu maximus elit. Sed maximus pretium neque ac auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum tempus tellus ut sem bibendum, in vestibulum elit ultricies. Donec metus lectus, porttitor non est sit amet, eleifend accumsan libero. Aenean convallis vestibulum dolor at aliquam. Praesent sit amet purus pulvinar, elementum sapien eget, suscipit purus. Cras sollicitudin odio at tellus scelerisque vulputate. Duis sodales pulvinar tellus eget tincidunt. Sed egestas eros a velit vestibulum, eu scelerisque nunc dictum.
-
-Aenean sed nibh quis elit interdum fringilla a vel odio. In tristique ligula nec lacus iaculis, nec aliquam enim scelerisque. Donec eu quam molestie turpis fringilla elementum non pretium eros. Etiam augue orci, bibendum a sodales quis, rhoncus eu ipsum. Nulla dapibus mauris dui, quis pulvinar dolor tempus nec. Duis eu elementum orci. Curabitur vulputate tristique nunc, vitae tincidunt mi condimentum pulvinar. Curabitur volutpat sapien vitae ante dictum laoreet. Phasellus volutpat ultricies quam. Integer tincidunt diam ac dolor efficitur elementum. Etiam a sapien luctus, aliquam quam et, porta ipsum. Donec in nisi fermentum, imperdiet nulla ut, convallis lectus. Nunc luctus tellus ac nibh maximus gravida. Integer in convallis risus. Nulla finibus id metus ac varius. In nunc leo, mollis a hendrerit vehicula, dapibus ac ex.
-
-Fusce turpis tortor, condimentum in interdum ac, ornare a mauris. Curabitur tortor tortor, aliquam ultricies ullamcorper nec, fermentum et justo. Pellentesque viverra placerat turpis eget condimentum. Ut elementum lobortis ultricies. Maecenas blandit metus quis volutpat cursus. Suspendisse a aliquet sem. Quisque in semper diam, eget suscipit dui. In nec imperdiet mauris. Nam hendrerit metus feugiat commodo luctus. Nullam vulputate suscipit neque, in pellentesque velit ultricies at. Praesent ac tellus ac ipsum suscipit accumsan. Maecenas a turpis et dui interdum fermentum et et odio. Fusce massa nibh, dignissim nec orci id, pharetra interdum orci. Nulla tristique tortor urna, nec congue urna semper in. Vestibulum elementum justo a purus luctus, eu laoreet ligula efficitur. Curabitur et purus accumsan, lobortis dui quis, porttitor risus."
+                tools:text=""
                 android:textSize="16sp"
                 android:justificationMode="inter_character"/>
         </ScrollView>
